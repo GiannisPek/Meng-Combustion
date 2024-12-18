@@ -1,0 +1,193 @@
+! GRI-Mech Version 3.0 7/30/99  CHEMKIN-II format
+! See README30 file at anonymous FTP site unix.sri.com, directory gri;
+! WorldWideWeb home page http://www.me.berkeley.edu/gri_mech/ or
+! through http://www.gri.org , under 'Basic  Research', 
+! for additional information, contacts, and disclaimer
+ELEMENTS
+O  H  C  N  AR
+END
+SPECIES
+H       H2      O       O2      OH      H2O     HO2     H2O2
+CH3     CH4     CO      CO2     HCO     CH2O    CH2OH   CH3O
+CH3OH   N2      N       NO      N2O     NH      NCO     CN
+CH      CH2     HCN
+END
+!THERMO
+! Insert GRI-Mech thermodynamics here or use in default file
+!END
+REACTIONS
+! Methanol Combustion !
+H+O2<=>O+OH                              3.550E+15    -.400   16600.00
+O+H2<=>H+OH                              5.080E+04    2.700    6290.00
+OH+H2<=>H+H2O                            2.160E+08    1.500    3430.00
+O+H2O<=>2OH                              2.970E+06    2.000   13400.00
+H2+M<=>2H+M                              4.580E+19   -1.400  104000.00
+H2/ 2.50/ H2O/ 12.00/ CO/ 1.90/ CO2/ 3.80/ 
+2O+M<=>O2+M                              6.160E+15    -.500        .00
+H2/ 2.50/ H2O/12.00/ CO/ 1.90/ CO2/ 3.80/ 
+O+H+M<=>OH+M                             4.710E+18   -1.000        .00
+H2/2.50/ H2O/12.00/ CO/1.90/ CO2/3.80/ 
+H+OH+M<=>H2O+M                           3.800E+22   -2.000        .00
+H2/ 2.5/ H2O/12.00/ CO/1.90/ CO2/3.80/ 
+H+O2(+M)<=>HO2(+M)                       1.480E+12     .600        .00
+	 LOW  /  6.370E+20   -1.720   525.00/
+	 TROE/   .800  1.000E-30  1.000E+30 /
+H2/2.00/ H2O/11.00/ CO/1.90/ CO2/3.80/ O2/ .78/ 
+ DUPLICATE
+H+O2(+M)<=>HO2(+M)                       1.480E+12     .600        .00
+	 LOW  /  9.040E+19   -1.500   492.00/ 
+	 TROE/   .500  1.000E-30  1.000E+30 /
+H2/ 3.00/ H2O/ 16.00/ CO/ 2.70/ CO2/5.40/ O2/ 1.10/ 
+ DUPLICATE
+H+HO2<=>O2+H2                            1.660E+13     .000     823.00
+H+HO2<=>2OH                              7.080E+13     .000     295.00
+O+HO2<=>OH+O2                            3.250E+13     .000        .00
+OH+HO2<=>O2+H2O                          2.890E+13     .000    -497.00
+2HO2<=>O2+H2O2                           1.300E+11     .000   -1630.00
+ DUPLICATE
+2HO2<=>O2+H2O2                           4.200E+14     .000   12000.00
+ DUPLICATE
+H2O2(+M)<=>2OH(+M)                       2.950E+14     .000   48400.00
+	 LOW  /  1.200E+17     .000   45500.00/ 
+	 TROE/   .500  1.000E-30  1.000E+30 /
+H2/2.50/ H2O/12.00/ CO/1.90/ CO2/3.80/ 
+H+H2O2<=>OH+H2O                          2.410E+13     .000    3970.00
+H+H2O2<=>HO2+H2                          4.820E+13     .000    7950.00
+O+H2O2<=>OH+HO2                          9.550E+06    2.000    3970.00
+OH+H2O2<=>HO2+H2O                        1.000E+12     .000        .00
+ DUPLICATE
+OH+H2O2<=>HO2+H2O                        5.800E+14     .000    9560.00
+ DUPLICATE
+O+CO(+M)<=>CO2(+M)                       1.800E+10     .000    2380.00
+	 LOW  /  1.550E+24   -2.790   4190.00/ 
+H2/2.50/ H2O/12.00/ CO/1.90/ CO2/3.80/ 
+O2+CO<=>O+CO2                            2.530E+12     .000   47700.00
+HO2+CO<=>OH+CO2                          3.010E+13     .000   23000.00
+OH+CO<=>H+CO2                            2.230E+05    1.900   -1160.00
+HCO+M<=>H+CO+M                           4.750E+11     .700   14900.00
+H2/2.50/ H2O/ 6.00/ CO/1.90/ CO2/3.80/ 
+HCO+O2<=>HO2+CO                          7.580E+12     .000     410.00
+H+HCO<=>H2+CO                            7.230E+13     .000        .00
+O+HCO<=>OH+CO                            3.020E+13     .000        .00
+OH+HCO<=>H2O+CO                          3.020E+13     .000        .00
+O+HCO<=>H+CO2                            3.000E+13     .000        .00
+HCO+HO2<=>CO2+OH+H                       3.000E+13     .000        .00
+HCO+HCO<=>H2+CO+CO                       3.000E+12     .000        .00
+CH3+HCO<=>CH4+CO                         1.200E+14     .000        .00
+HCO+HCO<=>CH2O+CO                        3.000E+13     .000        .00
+CH2O+M<=>HCO+H+M                         3.300E+39   -6.300   99900.00
+H2/2.50/ H2O/12.00/ CO/1.90/ CO2/3.80/  
+CH2O+M<=>CO+H2+M                         3.100E+45   -8.000   97500.00
+H2/2.50/ H2O/12.00/ CO/1.90/ CO2/3.80/ 
+H+CH2O<=>HCO+H2                          5.740E+07    1.900    2750.00
+O+CH2O<=>OH+HCO                          1.810E+13     .000    3080.00
+OH+CH2O<=>HCO+H2O                        3.430E+09    1.200    -447.00
+O2+CH2O<=>HO2+HCO                        1.230E+06    3.000   52000.00
+HO2+CH2O<=>HCO+H2O2                      4.110E+04    2.500   10200.00
+CH3+CH2O<=>HCO+CH4                       3.640E-06    5.400     998.00
+O+CH3<=>H+CH2O                           8.430E+13     .000        .00
+CH3+O2<=>O+CH3O                          1.990E+18   -1.600   29200.00
+CH3+O2<=>OH+CH2O                         3.470E+11     .000   14600.00
+HO2+CH3<=>OH+CH3O                        2.410E+10     .800   -2330.00
+H+CH3(+M)<=>CH4(+M)                      1.270E+16    -.600     383.00
+	 LOW  /  2.480E+33   -4.760   2440.00/ 
+	 TROE/   .783  74.00  2940.00  6960.00 /
+H2/2.00/ H2O/6.00/ CH4/2.00/ CO/1.50/ CO2/2.00/ 
+H+CH4<=>CH3+H2                           5.470E+07    2.000   11200.00
+O+CH4<=>OH+CH3                           3.150E+12     .500   10300.00
+OH+CH4<=>CH3+H2O                         5.720E+06    2.000    2640.00
+HO2+CH3<=>O2+CH4                         3.160E+12     .000        .00
+HO2+CH4<=>CH3+H2O2                       1.810E+11     .000   18600.00
+CH2OH+M<=>H+CH2O+M                       1.000E+14     .000   25100.00
+H2/2.00/ H2O/6.00/ CH4/2.00/ CO/1.50/ CO2/2.00/ 
+H+CH2OH<=>H2+CH2O                        6.000E+12     .000        .00
+H+CH2OH<=>OH+CH3                         9.640E+13     .000        .00
+O+CH2OH<=>OH+CH2O                        4.200E+13     .000        .00
+OH+CH2OH<=>H2O+CH2O                      2.400E+13     .000        .00
+CH2OH+O2<=>HO2+CH2O                      2.410E+14     .000    5020.00
+ DUPLICATE
+CH2OH+O2<=>HO2+CH2O                      1.510E+15   -1.000        .00
+ DUPLICATE
+CH2OH+HO2<=>CH2O+H2O2                    1.200E+13     .000        .00
+CH2OH+HCO<=>CH3OH+CO                     1.000E+13     .000        .00
+!CH2OH+HCO<=>CH2O+CH2O                    1.500E+13     .000        .00
+CH2OH+CH2OH<=>CH3OH+CH2O                 3.000E+12     .000        .00
+CH2OH+CH3O<=>CH3OH+CH2O                  2.400E+13     .000        .00
+CH3O+M<=>H+CH2O+M                        8.300E+17   -1.200   15500.00
+H2/2.00/ H2O/6.00/ CH4/2.00/ CO/1.50/ CO2/2.00/ 
+H+CH3O<=>OH+CH3                          3.200E+13     .000        .00
+O+CH3O<=>OH+CH2O                         6.000E+12     .000        .00
+OH+CH3O<=>H2O+CH2O                       1.800E+13     .000        .00
+CH3O+O2<=>HO2+CH2O                       9.030E+13     .000   12000.00
+ DUPLICATE
+CH3O+O2<=>HO2+CH2O                       2.200E+10     .000    1750.00
+ DUPLICATE
+CH3O+HO2<=>CH2O+H2O2                     3.000E+11     .000        .00
+CH3O+CO<=>CH3+CO2                        1.600E+13     .000   11800.00
+CH3O+HCO<=>CH3OH+CO                      9.000E+13     .000        .00
+CH3O+CH3O<=>CH3OH+CH2O                   6.000E+13     .000        .00
+OH+CH3(+M)<=>CH3OH(+M)                   2.790E+18   -1.400    1330.00
+     LOW  /  4.000E+36   -5.920   3140.00/
+   TROE/   .4120  195.0  5900.00  6390.00/ 
+H2/2.00/ H2O/6.00/ CH4/2.00/ CO/1.50/ CO2/2.00/ 
+H+CH2OH(+M)<=>CH3OH(+M)                  1.060E+12     .500      86.00
+     LOW  /  4.360E+31   -4.650   5080.00/
+    TROE/   .600  100.00  90000.0  10000.0 /
+H2/2.00/ H2O/6.00/ CH4/2.00/ CO/1.50/ CO2/2.00/ 
+H+CH3O(+M)<=>CH3OH(+M)                   2.430E+12     .500      50.00
+     LOW  /  4.660E+41   -7.440   14100.0/
+   TROE/   .700  100.00  90000.0 10000.00 /
+H2/2.00/ H2O/6.00/ CH4/2.00/ CO/1.50/ CO2/2.00/ 
+H+CH3OH<=>CH2OH+H2                       3.200E+13     .000    6100.00
+H+CH3OH<=>CH3O+H2                        8.000E+12     .000    6100.00
+O+CH3OH<=>OH+CH2OH                       3.880E+05    2.500    3080.00
+!OH+CH3OH<=>CH3O+H2O                      1.000E+06    2.100     497.00
+OH+CH3OH<=>CH2OH+H2O                     7.100E+06    1.800    -596.00 
+CH3OH+O2<=>CH2OH+HO2                     2.050E+13     .000   44900.00 
+CH3OH+HCO<=>CH2OH+CH2O                   9.640E+03    2.900   13100.00 
+CH3OH+HO2<=>CH2OH+H2O2                   3.980E+13     .000   19400.00 
+CH3+CH3OH<=>CH2OH+CH4                    3.190E+01    3.200    7170.00  
+CH3O+CH3OH<=>CH3OH+CH2OH                 3.000E+11     .000    4060.00 
+
+! Extended Zeldovich + Fenimore !
+
+! Extended Zeldovich !
+N+NO<=>N2+O                              2.700E+13     .000     355.00
+N+O2<=>NO+O                              9.000E+09    1.000    6500.00
+N+OH<=>NO+H                              3.360E+13     .000     385.00
+N2O+O<=>2NO                              2.900E+13     .000   23150.00
+N2O(+M)<=>N2+O(+M)                       7.910E+10     .000   56020.00
+     LOW  /  6.370E+14     .000  56640.00/
+H2/2.00/ H2O/6.00/ CH4/2.00/ CO/1.50/ CO2/2.00/ 
+
+! Fenimore !
+CH+N2<=>HCN+N                            3.120E+09    0.880   20130.00
+CH2+N2<=>HCN+NH                          1.000E+13     .000   74000.00
+HCN+O<=>NCO+H                            2.030E+04    2.640    4980.00
+HCN+O<=>NH+CO                            5.070E+03    2.640    4980.00
+HCN+O<=>CN+OH                            3.910E+09    1.580   26600.00
+CH+NO<=>HCN+O                            4.100E+13     .000        .00
+CH2+NO<=>OH+HCN                          2.900E+14    -.690     760.00
+CH3+NO<=>HCN+H2O                         9.600E+13     .000   28800.00
+CH3+N<=>HCN+H2                           3.700E+12     .150     -90.00
+CN+OH<=>NCO+H                            4.000E+13     .000        .00
+CN+H2O<=>HCN+OH                          8.000E+12     .000    7460.00
+CN+O2<=>NCO+O                            6.140E+12     .000    -440.00
+CN+H2<=>HCN+H                            2.950E+05    2.450    2240.00
+NCO+O<=>NO+CO                            2.350E+13     .000        .00
+NCO+H<=>NH+CO                            5.400E+13     .000        .00
+NCO+OH<=>NO+H+CO                         0.250E+13     .000        .00
+NCO+N<=>N2+CO                            2.000E+13     .000        .00
+NCO+O2<=>NO+CO2                          2.000E+12     .000   20000.00
+NCO+M<=>N+CO+M                           3.100E+14     .000   54050.00
+H2/2.00/ H2O/6.00/ CH4/2.00/ CO/1.50/ CO2/2.00/ 
+NCO+NO<=>N2O+CO                          1.900E+17   -1.520     740.00
+NCO+NO<=>N2+CO2                          3.800E+18   -2.000     800.00
+NH+O<=>NO+H                              4.000E+13     .000        .00
+NH+H<=>N+H2                              3.200E+13     .000     330.00
+NH+OH<=>N+H2O                            2.000E+09    1.200        .00
+NH+O2<=>NO+OH                            1.280E+06    1.500     100.00
+NH+N<=>N2+H                              1.500E+13     .000        .00
+NH+NO<=>N2+OH                            2.160E+13    -.230        .00
+NH+NO<=>N2O+H                            3.650E+14    -.450        .00 
+END

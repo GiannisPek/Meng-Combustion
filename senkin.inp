@@ -1,0 +1,9 @@
+CONV
+TEMP 889.91
+PRES 28.62
+REAC CH3OH 0.1229
+REAC O2 0.1843                                                                                    
+REAC N2 0.6928       
+TIME .03
+DELT .0001          
+END
